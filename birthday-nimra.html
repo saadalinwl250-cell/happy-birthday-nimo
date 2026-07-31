@@ -4,50 +4,30 @@
 <meta charset="UTF-8">
 <title>For Nimra</title>
 <style>
-body{
-  margin:0;
-  background:linear-gradient(pink, #ffe6f0);
-  font-family:'Segoe UI', sans-serif;
-  text-align:center;
-  overflow:hidden; /* taake phool bahar na jayen */
-}
+body{margin:0;background:linear-gradient(pink, #ffe6f0);font-family:'Segoe UI', sans-serif;text-align:center;overflow:hidden}
 .box{background:#fff;width:90%;max-width:400px;margin:80px auto;padding:30px;border-radius:20px;box-shadow:0 5px 20px #0003;position:relative;z-index:999}
 input{padding:12px;width:80%;border:2px solid pink;border-radius:10px;font-size:16px}
 button{padding:12px 30px;background:hotpink;color:#fff;border:0;border-radius:20px;font-size:16px;margin-top:10px;cursor:pointer}
 #main{display:none;padding:30px;animation:fadeIn 2s}
 h1{color:hotpink;font-size:32px;animation:pop 1s}
 p{font-size:18px;line-height:1.8}
-
-/* PHOOL GIRNE WALA ANIMATION */
-.phool{
-  position:fixed;
-  top:-50px;
-  font-size:25px;
-  animation: girna 5s linear infinite;
-  z-index:1;
-}
-@keyframes girna{
-  to{transform:translateY(110vh) rotate(360deg);}
-}
-
-/* TEXT ANIMATION */
+.phool{position:fixed;top:-50px;font-size:25px;animation: girna 5s linear infinite;z-index:1}
+@keyframes girna{to{transform:translateY(110vh) rotate(360deg);}}
 @keyframes fadeIn{ from{opacity:0} to{opacity:1} }
 @keyframes pop{ 0%{transform:scale(0.5)} 100%{transform:scale(1)} }
 </style>
 </head>
 <body>
 
-<!-- PASSWORD WALA PAGE -->
 <div class="box" id="login">
 <h2>🔒 Secret</h2>
 <p>Password dalo meri jaan</p>
-<input type="password" id="pass" placeholder="nimra">
+<input type="password" id="pass" placeholder="enter password baby">
 <br>
 <button onclick="check()">Open</button>
-<p id="err" style="color:red;display:none">Ghalat password</p>
+<p id="err" style="color:red;display:none">Ghalat password nimo</p>
 </div>
 
-<!-- MAIN BIRTHDAY PAGE -->
 <div id="main">
 <h1>Happy Birthday Nimra ul Nisa ❤️</h1>
 <p>
@@ -61,35 +41,5 @@ Love you 🫂
 <div style="font-size:60px">🎂🌸🎈</div>
 </div>
 
-<!-- HAPPY BIRTHDAY SONG -->
-<audio id="song" loop>
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-function check(){
-  var p = document.getElementById("pass").value;
-  if(p.toLowerCase() == "nimra"){
-    document.getElementById("login").style.display = "none";
-    document.getElementById("main").style.display = "block";
-    
-    // SONG CHALA DO
-    document.getElementById("song").play();
-    
-    // PHOOL GIRAO 30
-    for(let i=0; i<30; i++){
-      let d=document.createElement("div");
-      d.className="phool";
-      d.innerHTML="🌸";
-      d.style.left=Math.random()*100+"%";
-      d.style.animationDelay=Math.random()*3+"s";
-      document.body.appendChild(d);
-    }
-  } else {
-    document.getElementById("err").style.display = "block";
-  }
-}
-</script>
-
-</body>
-</html>
+<!-- YOUTUBE SONG CHUP KE BAJE GA -->
+<iframe id="song" width="0" height="0" src="https://www.youtube.com/embed/2ZpCLdA0WNU?autoplay=1&loop=1&playlist=2ZpCLdA0WNU&controls=0" frameborder="0" allow="autoplay"></iframe>
