@@ -1,115 +1,48 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Nimra</title>
+<title>For Nimra</title>
 <style>
-  body {
-    margin:0; 
-    font-family:'Segoe UI', sans-serif; 
-    background:linear-gradient(pink, #ffe6f0); 
-    text-align:center; 
-    overflow-x:hidden;
-  }
-  .box {
-    background:white; 
-    width:90%; 
-    max-width:400px; 
-    margin:100px auto; 
-    padding:30px; 
-    border-radius:20px; 
-    box-shadow:0 0 20px rgba(0,0,0,0.2); 
-    position:relative; 
-    z-index:999;
-  }
-  h1 {color:hotpink;}
-  input {
-    padding:12px; 
-    width:80%; 
-    border:2px solid pink; 
-    border-radius:10px; 
-    margin:10px 0;
-    font-size:16px;
-  }
-  button {
-    padding:12px 30px; 
-    background:hotpink; 
-    color:white; 
-    border:none; 
-    border-radius:20px; 
-    font-size:16px; 
-    cursor:pointer;
-  }
-  button:hover {background:deeppink;}
-  #main {display:none; padding:20px;}
-  .confetti {
-    position:fixed; 
-    width:10px; 
-    height:10px; 
-    top:0; 
-    animation:fall 3s linear infinite;
-    z-index:1;
-  }
-  @keyframes fall {
-    to {transform:translateY(100vh) rotate(360deg);}
-  }
-  p {font-size:18px; line-height:1.8;}
+body{margin:0;background:linear-gradient(pink,#ffe6f0);font-family:Arial;text-align:center}
+.box{background:#fff;width:90%;max-width:400px;margin:120px auto;padding:30px;border-radius:20px;box-shadow:0 5px 20px #0003}
+input{padding:12px;width:80%;border:2px solid pink;border-radius:10px;font-size:16px}
+button{padding:12px 30px;background:hotpink;color:#fff;border:0;border-radius:20px;font-size:16px;margin-top:10px;cursor:pointer}
+#main{display:none;padding:30px}
+h1{color:hotpink}
 </style>
 </head>
 <body>
 
-<!-- PASSWORD WALA PAGE -->
 <div class="box" id="login">
-  <h2>🔒 Secret Hai</h2>
-  <p>Password dalo meri jaan</p>
-  <input type="password" id="pass" placeholder="Password">
-  <br>
-  <button id="openBtn">Open</button>
-  <p id="error" style="color:red; display:none; margin-top:10px;">Ghalat password!</p>
+<h2>🔒 Secret</h2>
+<p>Password dalo</p>
+<input type="password" id="pass" placeholder="nimra">
+<br>
+<button onclick="check()">Open</button>
+<p id="err" style="color:red;display:none">Ghalat password</p>
 </div>
 
-<!-- MAIN BIRTHDAY PAGE -->
 <div id="main">
-  <h1>Happy Birthday Nimra ul Nisa ❤️</h1>
-  <div style="font-size:40px;">🌸🌸🌸</div>
-  <br>
-  <p>
-  Pyari shehzadi, ap meri ladli c dost ho...<br>
-  Ap mere liye sabse khas ho...<br>
-  Allah apko hamesha khush rakhe...<br>
-  Happy Birthday once again meri jaan 🫂
-  </p>
+<h1>Happy Birthday Nimra ul Nisa ❤️</h1>
+<p style="font-size:18px">Pyari shehzadi,<br>Ap meri sabse khas dost ho...<br>Allah apko hamesha khush rakhe...<br>Love you 🫂</p>
 </div>
 
 <script>
-  // Laptop + Mobile + Safari sab ke liye
-  document.getElementById("openBtn").addEventListener("click", checkPass);
-  
-  // Enter dabane se bhi khul jaye
-  document.getElementById("pass").addEventListener("keypress", function(e){
-    if(e.key === "Enter") checkPass();
-  });
-
-  function checkPass(){
-    let p = document.getElementById("pass").value;
-    if(p.toLowerCase().trim() == "nimra"){
-      document.getElementById("login").style.display="none";
-      document.getElementById("main").style.display="block";
-      // Phool girana
-      for(let i=0; i<50; i++){
-        let d=document.createElement("div");
-        d.className="confetti";
-        d.innerHTML = "🌸";
-        d.style.fontSize = "20px";
-        d.style.left=Math.random()*100+"%";
-        d.style.animationDelay=Math.random()*3+"s";
-        document.body.appendChild(d);
-      }
-    } else {
-      document.getElementById("error").style.display="block";
-    }
+function check(){
+  var p = document.getElementById("pass").value;
+  if(p.toLowerCase() == "nimra"){
+    document.getElementById("login").style.display = "none";
+    document.getElementById("main").style.display = "block";
+  } else {
+    document.getElementById("err").style.display = "block";
   }
+}
+// Enter se bhi khule
+document.getElementById("pass").onkeypress = function(e){
+  if(e.keyCode == 13) check();
+}
 </script>
 
 </body>
