@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>birthday</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday Murshad ki Wife ❤️</title>
+<style>
+body {
+    background: linear-gradient(135deg, #ff9a9e, #fecfef, #fec5e5);
+    height:100vh;
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family: 'Arial', sans-serif;
+    overflow:hidden;
+}
+.card {
+    background: white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    animation: pop 1s ease;
+    max-width: 400px;
+}
+@keyframes pop {
+    from {transform:scale(0);}
+    to {transform:scale(1);}
+}
+h1 {
+    color:#e91e63;
+    font-size:32px;
+    margin:10px 0;
+}
+h2 {
+    color:#9c27b0;
+    font-size:24px;
+}
+p {
+    color:#555;
+    font-size:18px;
+    line-height:1.6;
+}
+.cake {
+    font-size:60px;
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%,100% {transform: translateY(0);}
+    50% {transform: translateY(-15px);}
+}
+.btn {
+    background: #e91e63;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    border-radius:25px;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:15px;
+}
+.confetti {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <div class="cake">🎂🎉🎈</div>
+    <h1>Happy Birthday!</h1>
+    <h2>Meri Pyari Wife nimra ul nisa❤️</h2>
+    <p>
+        meri shehzadi ap meri jan meri ladli c jan ho.<br>
+        meri lado khus rha kro ap na lara kro mera sath please shehzadi.<br>
+        Allah tumhe hamesha khush rakhe with me.<br>
+        I Love You So Much  nimra g💖
+    </p>
+    <button class="btn" onclick="alert('I Love You Forever ❤️')">Click Karo</button>
+</div>
+
+<script>
+// Confetti effect
+for(let i=0; i<50; i++){
+    let conf = document.createElement('div');
+    conf.style.position='absolute';
+    conf.style.width='10px';
+    conf.style.height='10px';
+    conf.style.background=['#ff69b4','#ffd700','#00bfff','#ff4500'][Math.floor(Math.random()*4)];
+    conf.style.left=Math.random()*100+'%';
+    conf.style.top='-10px';
+    conf.style.animation='fall 3s linear infinite';
+    conf.style.animationDelay=Math.random()*3+'s';
+    document.body.appendChild(conf);
+}
+let style = document.createElement('style');
+style.innerHTML = '@keyframes fall {to {transform: translateY(100vh) rotate(360deg);}}';
+document.head.appendChild(style);
+</script>
+
+</body>
+</html>
+</body>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday Nimra</title>
+<style>
+body {
+    background: linear-gradient(135deg, #ff9a9e, #fecfef);
+    height:100vh;
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family: 'Arial', sans-serif;
+    overflow:hidden;
+}
+.step {display:none; text-align:center; padding:30px; animation: fadeIn 1s;}
+.step.active {display:block;}
+@keyframes fadeIn {from{opacity:0; transform:scale(0.8)} to{opacity:1; transform:scale(1)}}
+
+.card {
+    background: white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    max-width: 400px;
+}
+input {
+    padding:10px;
+    border:2px solid #e91e63;
+    border-radius:10px;
+    font-size:16px;
+    width:200px;
+    text-align:center;
+}
+.btn {
+    background: #e91e63;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    border-radius:25px;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:15px;
+}
+h1 {color:#e91e63; font-size:36px;}
+h2 {color:#9c27b0; font-size:28px;}
+.flower {font-size:50px; position:absolute; animation: fall 4s linear infinite;}
+@keyframes fall {to {transform: translateY(100vh) rotate(360deg);}}
+</style>
+</head>
+<body>
+
+<!-- STEP 1: PASSWORD -->
+<div class="step active" id="step1">
+    <div class="card">
+        <h2>🔒 Secret Hai</h2>
+        <p>Password dalo meri jaan</p>
+        <input type="password" id="pass" placeholder="Password">
+        <br>
+        <button class="btn" onclick="checkPass()">Open</button>
+    </div>
+</div>
+
+<!-- STEP 2: FLOWERS GIRNA -->
+<div class="step" id="step2">
+    <h2>Phul bars rahe hain ❤️</h2>
+</div>
+
+<!-- STEP 3: HAPPY BIRTHDAY NAME -->
+<div class="step" id="step3">
+    <div class="card">
+        <h1>Happy Birthday</h1>
+        <h2>Nimra ul Nisa 🎂</h2>
+    </div>
+</div>
+
+<!-- STEP 4: CAPTION - BAD ME BATANA -->
+<div class="step" id="step4">
+    <div class="card">
+        <h2>Ye raha mera message ❤️</h2>
+        <p id="caption">happy birthday meri jan merishehzadi meri lado meri pyari c jan meri begummmmmm g musa ki mama jan lara na kro mera sath please meri jan apka ilawa koi nai mra sachi i love you so much nimoo always happy with me meri shehzadi</p>
+        <button class="btn" onclick="alert('I Love You Nimra ❤️')">I Love You</button>
+    </div>
+</div>
+
+<script>
+let currentStep = 1;
+
+// STEP 1: PASSWORD CHECK
+function checkPass(){
+    let pass = document.getElementById('pass').value;
+    if(pass.toLowerCase() == "nimra"){ // password "nimra" rakha hai
+        nextStep();
+    } else {
+        alert("Galt password! Hint: Uska naam 😊");
+    }
+}
+
+function nextStep(){
+    document.getElementById('step'+currentStep).classList.remove('active');
+    currentStep++;
+    document.getElementById('step'+currentStep).classList.add('active');
+    = 2){
+        for(let i=0; i<30; i++){
+            let f = document.createElement('div');
+            f.className = 'flower';
+            f.innerHTML = ['🌸','🌹','🌷','💐'][Math.floor(Math.random()*4)];
+            f.style.left = Math.random()*100+'%';
+            f.style.top = '-50px';
+            f.style.animationDelay = Math.random()*2+'s';
+            document.body.appendChild(f);
+        }
+        setTimeout(nextStep, 3000); // 3 sec baad agla step
+    }
+    
+    // STEP 3: 3 SEC BAAD NAME
+    if(currentStep == 3){
+        setTimeout(nextStep, 3000); // 3 sec baad agla step
+    // STEP 2: FLOWERS GIRAO
+    if(currentStep =
+    }
+}
+</script>
+
+</body>
+</html>
+</html>
